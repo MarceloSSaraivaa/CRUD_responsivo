@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="records.css">
+  <style>
+    .table-container {
+      overflow-y: auto;
+      max-height: 300px; /* Ajuste a altura máxima conforme necessário */
+    }
+  </style>
+  <title>Tabela de Registros</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Tabela de Registros</h1>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Cidade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody class="scrollable">
+          <!-- Linhas da tabela serão adicionadas dinamicamente usando JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    <div class="new-record-form">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="telefone" placeholder="Telefone" required>
+      <input type="text" id="cidade" placeholder="Cidade" required>
+      <button id="new-record-btn">Novo Cadastro</button>
+    </div>
+  </div>
+
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Editar Registro</h2>
+      <input type="text" id="edit-nome" placeholder="Nome" required>
+      <input type="email" id="edit-email" placeholder="Email" required>
+      <input type="tel" id="edit-telefone" placeholder="Telefone" required>
+      <input type="text" id="edit-cidade" placeholder="Cidade" required>
+      <button id="save-edit-btn" class="save-btn">Salvar</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
